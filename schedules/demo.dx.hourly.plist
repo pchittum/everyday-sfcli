@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+
+    <key>Label</key>
+    <string>demo.dx.hourly.plist</string>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StartInterval</key>
+    <integer>600</integer>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/pchittum/sfcli/err.log</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/pchittum/sfcli/sfhourly.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string><![CDATA[/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin]]></string>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/pchittum/sfcli/</string>
+
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/local/bin/dxhourlylimits.sh</string>
+    </array>
+
+	<key>SoftResourceLimits</key>
+    <dict>
+        <key>Core</key>
+        <integer>9223372036854775807</integer>
+    </dict>
+    <key>HardResourceLimits</key>
+    <dict>
+        <key>Core</key>
+        <integer>9223372036854775807</integer>
+    </dict>
+
+
+  </dict>
+</plist>
