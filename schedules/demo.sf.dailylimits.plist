@@ -4,19 +4,19 @@
   <dict>
 
     <key>Label</key>
-    <string>demo.dx.hourly.plist</string>
+    <string>demo.sf.dailylimits.plist</string>
 
     <key>RunAtLoad</key>
     <true/>
 
     <key>StartInterval</key>
-    <integer>600</integer>
+    <integer>3600</integer>
 
     <key>StandardErrorPath</key>
     <string>/Users/pchittum/sfcli/err.log</string>
 
     <key>StandardOutPath</key>
-    <string>/Users/pchittum/sfcli/sfhourly.log</string>
+    <string>/Users/pchittum/sfcli/sfdaily.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>
@@ -29,7 +29,7 @@
 
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/local/bin/dxhourlylimits.sh</string>
+      <string>/usr/local/bin/sfdailylimits.sh</string>
     </array>
 
 	<key>SoftResourceLimits</key>
