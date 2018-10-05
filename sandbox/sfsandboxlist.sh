@@ -26,3 +26,4 @@ echo "Fetch most recent 20 Sandboxes."
 eval "$command $query $adminuser"
 
 echo "Done."
+exit 0

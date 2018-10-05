@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 # script to refresh sandbox with using record:update command from salesforce cli
 # also a template for performing any Salesforce single record update
 # this script could also serve as a template for invoking any sfdx command through a shell script
@@ -31,8 +31,9 @@ echo "RUNNING COMMAND: $command $sobject $whereflag $adminuser $values"
 # eval currently required with complex value sets passed into the -v flag
 # otherwise the single quote ASCII code is being passed to the API
 
-eval "$command" "$sobject" "$whereflag" "$adminuser" "$values"
+eval "$command $sobject $whereflag $adminuser $values"
 
 echo "To check refresh status use the record Id above with sfsandboxstatus.sh" 
 echo "./sfsandboxstatus.sh [sbx record id]"
 echo "Done."
+exit 0

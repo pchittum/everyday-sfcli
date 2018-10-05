@@ -9,3 +9,4 @@ dxoutput=$(date ; sfdx force:limits:api:display -u blixtar | grep -v 'Daily' | g
 #this writes to stdout for this script
 echo date
 echo "${dxoutput}"
+exit 0

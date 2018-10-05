@@ -36,3 +36,4 @@ eval "$command" "$sobject" "$adminuser" "$values"
 echo "To check refresh status use the record Id above with sfsandboxstatus.sh" 
 echo "./sfsandboxstatus.sh [sbx record id]"
 echo "Done."
+exit 0

@@ -9,3 +9,4 @@ dxoutput=$(sfdx force:limits:api:display -u blixtar | grep -v 'Hourly' | grep -v
 #this writes to stdout for this script
 echo date >> log-output/usage.log
 echo "${dxoutput}" >> log-output/usage.log
+exit 0

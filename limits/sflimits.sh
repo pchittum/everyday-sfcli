@@ -8,3 +8,4 @@ dxoutput=$(sfdx force:limits:api:display -u blixtar)
 
 #this writes to stdout for this script
 echo "${dxoutput}"
+exit 0

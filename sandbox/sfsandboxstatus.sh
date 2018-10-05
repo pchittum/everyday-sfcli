@@ -32,3 +32,4 @@ echo "Fetching current status for sandbox id $sbxinfoid"
 eval "$command $query $adminuser"
 
 echo "Done."
+exit 0

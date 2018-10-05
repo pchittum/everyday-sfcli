@@ -67,5 +67,4 @@ $command $sobject $whereflag $adminuser
 
 echo "Done."
 
-
-# sfdx force:data:record:update -w [where record matches field value] -s User -u [my alias] -v IsActive=falseexit 0
+exit 0
