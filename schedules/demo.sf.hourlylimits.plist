@@ -13,10 +13,10 @@
     <integer>600</integer>
 
     <key>StandardErrorPath</key>
-    <string>/Users/pchittum/sfcli/err.log</string>
+    <string>/usr/local/sfcli-err.log</string>
 
     <key>StandardOutPath</key>
-    <string>/Users/pchittum/sfcli/sfhourly.log</string>
+    <string>/usr/local/sfcli-hourly.log</string>
 
     <key>EnvironmentVariables</key>
     <dict>
@@ -25,11 +25,12 @@
     </dict>
 
     <key>WorkingDirectory</key>
-    <string>/Users/pchittum/sfcli/</string>
+    <string>/usr/local/bin/</string>
 
     <key>ProgramArguments</key>
     <array>
       <string>/usr/local/bin/sfhourlylimits.sh</string>
+      <string>[!!! User Name Required !!!]</string>
     </array>
 
 	<key>SoftResourceLimits</key>
