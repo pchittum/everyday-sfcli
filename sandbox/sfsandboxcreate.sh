@@ -6,6 +6,15 @@
 # possible fields for sandbox refresh: ApexClassId, AutoActivate, CopyArchivedActivities, CopyChatter, Description,
 #   HistoryDays, LicenseType*, SandboxName, SourceId, TemplateId
 
+# is salesforce cli installed?
+if [[ ! -e $(which sfdx) ]]; then
+  
+  echo "The Salesforce CLI is not installed on this machine."
+  echo "Please install from https://developer.salesforce.com/tools/sfdxcli."
+  exit 1
+
+fi
+
 echo "Create sandbox script."
 
 read -p "User or alias for parent org: " user

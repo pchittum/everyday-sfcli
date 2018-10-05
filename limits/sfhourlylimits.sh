@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [[ ! -e $(which sfdx) ]]; then
+  
+  echo "The Salesforce CLI is not installed on this machine."
+  echo "Please install from https://developer.salesforce.com/tools/sfdxcli."
+  exit 1
+
+fi
 
 #capture stdout
 dxoutput=$(date ; sfdx force:limits:api:display -u blixtar | grep -v 'Daily' | grep -v 'Package2' | grep -v 'Concurrent' | grep -v 'SingleEmail'  | grep -v 'MassEmail' | grep -v 'Storage' | grep -v 'PermissionSets')

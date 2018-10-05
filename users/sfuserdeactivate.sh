@@ -3,6 +3,15 @@
 # could serve as template for performing any Salesforce single record update
 # this script could also serve as a template for invoking any sfdx command through a shell script
 
+# is salesforce cli installed?
+if [[ ! -e $(which sfdx) ]]; then
+  
+  echo "The Salesforce CLI is not installed on this machine."
+  echo "Please install from https://developer.salesforce.com/tools/sfdxcli."
+  exit 1
+
+fi
+
 if [ "$#" != "2" ]; then
 # check for 2 inputs and handle
 # 1 input only assumes we have a username and use default DX project user 

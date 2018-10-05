@@ -2,6 +2,15 @@
 # retrieve most recent 20 sandboxes
 # The best I can do as SOQL query WHERE clauses on the STATUS field don't seem to work.
 
+# is salesforce cli installed?
+if [[ ! -e $(which sfdx) ]]; then
+  
+  echo "The Salesforce CLI is not installed on this machine."
+  echo "Please install from https://developer.salesforce.com/tools/sfdxcli."
+  exit 1
+
+fi
+
 # ensure we have the correct input
 if [ "$#" != "1" ]; then
 
