@@ -24,7 +24,7 @@ fi
 adminuser="-u $1"
 
 # query for the most recently started sandbox refresh
-adminuser="-u $user"
+# adminuser="-u $user"
 command="sfdx force:data:soql:query"
 query="-q \"SELECT SandboxName,Status,CopyProgress,AutoActivate,LicenseType,SandboxOrganization,StartDate FROM SandboxProcess ORDER BY ActivatedDate DESC LIMIT 20\" -t"
 
