@@ -47,8 +47,6 @@ if [ "$#" != "2" ]; then
 
 fi
 
-# we're good to go let's go deactivate them.
-
 # the org user alias is our one optional input. 
 # handle if we don't have that input
 if [ -n "$2" ]; then
