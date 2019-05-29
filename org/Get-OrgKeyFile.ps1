@@ -8,29 +8,15 @@ Param(
     [String]$CommandName = "sfdx"
 )
 
-#Check for sfdx installed function
-Function Test-Sfdx {
-<#
-    function to test is sfdx exists as a command. 
-    If not, we terminate the script. 
-#>
-    Try {
-        $noop = Get-Command $CommandName -ErrorAction Stop
-        
-    } Catch {
-        throw "Can't Find sfdx. Check if it is installed." 
-    }
-}
-
-# run our function to see if sfdx is installed
-# this here is a bit janky to create a function and then call it in the same script
-# but trying to think ahead and move this function outside of this script later. 
-
 Test-Sfdx
 
 [String]$sfdx = "sfdx"
 [String]$DxCommand = "force:org:display"
-[String]$Params = "--verbose --json -u $OrgUserOrAlias"
+
+# construct parameters and create params string
+[string]$AdminUser = Format-SfdxParamAndValue -ParamName '-u' -ParamValue $OrgUserOrAlias
+
+[String]$Params = "--verbose --json $AdminUser"
 
 $OrgNameFile = "$OrgUserOrAlias.txt"
 

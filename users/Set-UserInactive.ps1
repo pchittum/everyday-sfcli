@@ -1,5 +1,5 @@
 ﻿<#
-    Fetch information about one user 
+    Deactivate a user based on Salesforce username. 
 #>
 Param(
     [Parameter(Mandatory, HelpMessage = "Specify a salesforce username in the format of an email address: username@to.deactivate")]
@@ -16,20 +16,16 @@ Param(
 #     If not, we terminate the script. 
 # #>
 #     Try {
-#         $noop = Get-Command sfdx -ErrorAction Stop
-        
+#         $noop = Get-Command sfdx -ErrorAction Stop 
 #     } Catch {
 #         throw "Can't Find sfdx. Check if it is installed." 
 #     }
-
 #     Try {
 #         $noop = Get-Command Format-SfdxParamAndValue -ErrorAction Stop
 #     } Catch {
 #         throw "The Format-SfdxParamAndValue function is not available in the current shell."
 #     }
-
 # }
-
 # Function Format-SfdxParamAndValue ([String]$ParamName, [String]$ParamValue){
 #     If ($ParamValue -ne '') {
 #         Return "$ParamName $ParamValue"
@@ -39,8 +35,6 @@ Param(
 # }
 
 # run our function to see if sfdx is installed
-# this here is a bit janky to create a function and then call it in the same script
-# but trying to think ahead and move this function outside of this script later. 
 
 Test-Sfdx
 
@@ -69,13 +63,11 @@ if ($RawResult.status -eq 0) {
 }
 
 
-
+#
 # $CmdOutput = Invoke-Expression "$sfdx $DxCommand $Params" | ConvertFrom-Json
-
-
 # $CmdOutput.result
 # writing output to file 
 # typically JSON from sfdx commands has a result top level node that we will take some data from
 # Write-Output $CmdOutput.result | Out-File -FilePath $FullOutputPath -NoNewline -Encoding UTF8
-
 # Write-Output "Success. Wrote org auth key file $FullOutputPath"
+#
