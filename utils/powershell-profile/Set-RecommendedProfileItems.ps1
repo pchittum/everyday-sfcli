@@ -1,5 +1,7 @@
 cd ~
 
+# Convenience functions to speed up common basic sfdx commands that run 
+# against defaultusername orgs
 Function dxopen ([string]$u) {
     If ($u -ne '') {
         sfdx force:org:open -u $u     
