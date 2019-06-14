@@ -12,7 +12,7 @@ PowerShell scripts are provided for Windows users. Scripts were developed on PSV
 
 ### Setting PowerShell Profile
 
-To work with the PowerShell scripts as defined here, you'll want to add items from the `Set-RecommendedProfileItems.ps1` [script][https://github.com/pchittum/everyday-sfcli/blob/master/powershell-profile/Set-RecommendedProfileItems.ps1] to your powershell profile. I'd recommended using the `$profile.CurrentUserAllHosts` profile script to ensure that they are used anytime PowerShell is run. 
+To work with the PowerShell scripts as defined here, you'll want to add items from the `Set-RecommendedProfileItems.ps1` [script](https://github.com/pchittum/everyday-sfcli/blob/master/powershell-profile/Set-RecommendedProfileItems.ps1) to your powershell profile. I'd recommended using the `$profile.CurrentUserAllHosts` profile script to ensure that they are used anytime PowerShell is run. 
 
 If you don't already have a script in place for your PowerShell profile, you can add one as follows. 
 
